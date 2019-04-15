@@ -1,18 +1,30 @@
 package lightbishop.domain.chess;
 
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
-@AllArgsConstructor(staticName = "of", access = AccessLevel.PRIVATE)
-public class Tournament {
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public abstract class Tournament {
 
-    private TournamentState tournamentState;
+    protected TournamentState tournamentState;
 
-    private TournamentType tournamentType;
+    protected TournamentType tournamentType;
 
-    public static Tournament newRoundRobinTournamentOf(){
-        return Tournament.of(TournamentState.CREATED, TournamentType.ROUND_ROBIN);
+    public static IndividualTournament newIndividualRoundRobinTournamentOf(){
+        return new IndividualTournament(TournamentState.CREATED, TournamentType.ROUND_ROBIN);
+    }
+
+    public static IndividualTournament newIndividualSwissTournamentOf(){
+        return new IndividualTournament(TournamentState.CREATED, TournamentType.SWISS);
+    }
+
+    public static TeamTournament newTeamRoundRobinTournamentOf(){
+        return new TeamTournament(TournamentState.CREATED, TournamentType.ROUND_ROBIN);
+    }
+
+    public static TeamTournament newTeamSwissTournamentOf(){
+        return new TeamTournament(TournamentState.CREATED, TournamentType.SWISS);
     }
 }
