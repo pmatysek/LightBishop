@@ -1,4 +1,4 @@
-package lightbishop.domain.chess;
+package lightbishop.domain.chess.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,8 +1,11 @@
-package lightbishop.domain.chess;
+package lightbishop.domain.chess.player;
+
+import lightbishop.domain.chess.common.SortingField;
+import lightbishop.domain.chess.player.Player;
 
 import java.util.Comparator;
 
-public enum PlayerSortingField implements SortingField<Player>{
+public enum PlayerSortingField implements SortingField<Player> {
     NAME(Comparator.comparing((Player p) -> p.getPersonalData().getName())),
     SURNAME(Comparator.comparing((Player p) -> p.getPersonalData().getSurname())),
     BIRTH_DATE(Comparator.comparing((Player p) -> p.getPersonalData().getBirthDate()));

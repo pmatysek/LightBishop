@@ -1,5 +1,6 @@
-package lightbishop.domain.chess;
+package lightbishop.domain.chess.player;
 
+import lightbishop.domain.chess.common.PersonalData;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

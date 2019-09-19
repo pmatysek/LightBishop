@@ -1,5 +1,10 @@
 package lightbishop.domain.chess
 
+import lightbishop.domain.chess.tournament.IndividualTournament
+import lightbishop.domain.chess.tournament.TeamTournament
+import lightbishop.domain.chess.tournament.Tournament
+import lightbishop.domain.chess.tournament.TournamentState
+import lightbishop.domain.chess.tournament.TournamentType
 import spock.lang.Specification
 
 class TournamentTest extends Specification {

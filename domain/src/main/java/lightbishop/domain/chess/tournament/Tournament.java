@@ -1,4 +1,4 @@
-package lightbishop.domain.chess;
+package lightbishop.domain.chess.tournament;
 
 import lombok.AccessLevel;
 import lombok.Getter;

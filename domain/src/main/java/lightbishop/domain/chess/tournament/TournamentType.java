@@ -1,4 +1,4 @@
-package lightbishop.domain.chess;
+package lightbishop.domain.chess.tournament;
 
 public enum TournamentType {
     ROUND_ROBIN,

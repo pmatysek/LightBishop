@@ -1,10 +1,14 @@
 package lightbishop.domain.chess
 
+import lightbishop.domain.chess.common.PersonalData
+import lightbishop.domain.chess.player.Player
+import lightbishop.domain.chess.player.PlayerSortingField
+import lightbishop.domain.chess.tournament.Tournament
 import spock.lang.Specification
 
 import java.time.LocalDate
 
-import static lightbishop.domain.chess.PlayerSortingField.*
+import static lightbishop.domain.chess.player.PlayerSortingField.*
 
 class IndividualTournamentTest extends Specification {
     def "when player is added to tournament then tournament's players list should contain that player"() {
