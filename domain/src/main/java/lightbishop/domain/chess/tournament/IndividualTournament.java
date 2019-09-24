@@ -2,6 +2,7 @@ package lightbishop.domain.chess.tournament;
 
 
 import lightbishop.domain.chess.common.ComparatorBuilder;
+import lightbishop.domain.chess.pairing.IndividualPairing;
 import lightbishop.domain.chess.player.Player;
 import lightbishop.domain.chess.player.PlayerSortingField;
 import lombok.Setter;
@@ -11,6 +12,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class IndividualTournament extends Tournament {
+
+    private IndividualPairing pairing;
 
     private List<Player> players;
 
@@ -24,10 +27,11 @@ public class IndividualTournament extends Tournament {
     @Setter
     private List<PlayerSortingField> resultsSortingRules;
 
-    IndividualTournament(TournamentState tournamentState, TournamentType tournamentType){
+    IndividualTournament(TournamentState tournamentState, TournamentType tournamentType, IndividualPairing pairing){
         super();
         this.tournamentType = tournamentType;
         this.tournamentState = tournamentState;
+        this.pairing = pairing;
         players = new ArrayList<>();
         startListSortingRules = DEFAULT_START_LIST_SORTING_ORDER;
         resultsSortingRules = DEFAULT_RESULTS_SORTING_ORDER;

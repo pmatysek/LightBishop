@@ -1,5 +1,7 @@
 package lightbishop.domain.chess.tournament;
 
+import lightbishop.domain.chess.pairing.RoundRobinIndividualPairing;
+import lightbishop.domain.chess.pairing.SwissIndividualPairing;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,11 +15,11 @@ public abstract class Tournament {
     protected TournamentType tournamentType;
 
     public static IndividualTournament newIndividualRoundRobinTournamentOf(){
-        return new IndividualTournament(TournamentState.CREATED, TournamentType.ROUND_ROBIN);
+        return new IndividualTournament(TournamentState.CREATED, TournamentType.ROUND_ROBIN, new RoundRobinIndividualPairing());
     }
 
     public static IndividualTournament newIndividualSwissTournamentOf(){
-        return new IndividualTournament(TournamentState.CREATED, TournamentType.SWISS);
+        return new IndividualTournament(TournamentState.CREATED, TournamentType.SWISS, new SwissIndividualPairing());
     }
 
     public static TeamTournament newTeamRoundRobinTournamentOf(){
